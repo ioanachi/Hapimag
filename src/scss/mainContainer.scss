@@ -28,6 +28,10 @@ html {
             color: rgb(8, 47, 186);
             background-color: transparent;
           }
+          .logoAndDropdowns .what .accordion a{
+            color: rgb(8, 47, 186);
+            background-color: transparent;
+          }
 
           .logoAndDropdowns .dropdown a {
             color: rgb(8, 47, 186);
@@ -60,7 +64,6 @@ html {
             text-transform: uppercase;
             float: left;
             margin-left: 10px;
-
           }
 
           .dropdown > a {
@@ -71,6 +74,7 @@ html {
           }
 
           .search {
+
             .dropdown {
               .dropdown-menu {
                 width: 1360px;
@@ -102,109 +106,158 @@ html {
           }
 
           .what {
-            color: white;
+
+            .accordion {
+              display: inline-block;
+              text-align: left;
+              margin: 1%;
+              width: 70%;
+
+              &:hover {
+                .accordion-content {
+                  max-height: 1300px;
+                }
+              }
+            }
+
+            .accordion-content {
+              -webkit-transition: max-height 1s;
+              -moz-transition: max-height 1s;
+              -ms-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+              background: #e5feff;
+              overflow: hidden;
+              // "height: 0" not work with css transitions
+              max-height: 0;
+            }
+
+            .accordion-inner {
+              padding: 0 15px;
+            }
+
+            .accordion-toggle {
+              color: white;
+              font-size: 20px;
+              float: left;
+              margin-left: 10px;
+              -webkit-transition: background 0.1s linear;
+              -moz-transition: background 0.1s linear;
+              -ms-transition: background 0.1s linear;
+              -o-transition: background 0.1s linear;
+              transition: background 0.1s linear;
+              background: transparent;
+              color: #fff;
+              display: block;
+              font-size: 30px;
+              margin: 0 0 10px;
+              padding: 10px;
+              text-align: center;
+              text-decoration: none;
+
+            }
+          }
+
+          .rightMenu {
+            float: right;
+            width: 27%;
+            height: 100%;
+            align-items: center;
+
+            .UpperBox {
+              float: right;
+              display: flex;
+              list-style: none;
+              margin-top: 30px;
+
+              a {
+                font-size: 15px;
+                font-weight: lighter;
+                color: white;
+                padding-right: 10px;
+                opacity: 0.9;
+                line-height: 1;
+              }
+            }
+
+            .bookingBox {
+              float: right;
+              display: flex;
+              list-style: none;
+              background-color: transparent;
+
+              a {
+                padding-right: 10px;
+                line-height: 1;
+                font-weight: lighter;
+                opacity: 0.9;
+                padding-right: 13px;
+                color: white;
+                font-size: 25px;
+              }
+            }
+          }
+        }
+      }
+
+      #popup {
+        position: absolute;
+        z-index: 3;
+        display: none;
+        top: 50px;
+        left: 50px;
+        /* you should change left and top */
+        width: 200px;
+        height: 200px;
+      }
+
+      #popup {
+        position: absolute;
+        z-index: 3;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 200px;
+      }
+
+      .hidepopup {
+        // display: none;
+      }
+
+      .showpopup {
+        display: block;
+      }
+
+      .textAndPhoto {
+        width: 80%;
+        height: 300px;
+        margin-left: 150px;
+
+        .justText {
+          width: 60%;
+          float: left;
+
+          h1 {
+            text-align: center;
+            font-style: normal;
+            color: inherit;
+            margin: 0 0 0.5rem;
+            line-height: 1.2;
+          }
+
+          p {
+            font-weight: 300;
+            line-height: 1.5;
+            color: #5e5e5e;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
           }
         }
 
-        .rightMenu {
+        .justPhoto {
+          width: 39%;
           float: right;
-          width: 27%;
-          height: 100%;
-          align-items: center;
-
-          .UpperBox {
-            float: right;
-            display: flex;
-            list-style: none;
-            margin-top: 30px;
-
-            a {
-              font-size: 15px;
-              font-weight: lighter;
-              color: white;
-              padding-right: 10px;
-              opacity: 0.9;
-              line-height: 1;
-            }
-          }
-
-          .bookingBox {
-            float: right;
-            display: flex;
-            list-style: none;
-            background-color: transparent;
-
-            a {
-              padding-right: 10px;
-              line-height: 1;
-              font-weight: lighter;
-              opacity: 0.9;
-              padding-right: 13px;
-              color: white;
-              font-size: 25px;
-            }
-          }
         }
-      }
-    }
-
-    #popup {
-      position: absolute;
-      z-index: 3;
-      display: none;
-      top: 50px;
-      left: 50px;
-      /* you should change left and top */
-      width: 200px;
-      height: 200px;
-    }
-
-    #popup {
-      position: absolute;
-      z-index: 3;
-      top: 50px;
-      left: 50px;
-      width: 200px;
-      height: 200px;
-    }
-
-    .hidepopup {
-      // display: none;
-    }
-
-    .showpopup {
-      display: block;
-    }
-
-    .textAndPhoto {
-      width: 80%;
-      height: 300px;
-      margin-left: 150px;
-
-      .justText {
-        width: 60%;
-        float: left;
-
-        h1 {
-          text-align: center;
-          font-style: normal;
-          color: inherit;
-          margin: 0 0 0.5rem;
-          line-height: 1.2;
-        }
-
-        p {
-          font-weight: 300;
-          line-height: 1.5;
-          color: #5e5e5e;
-          background: #fff;
-          -webkit-font-smoothing: antialiased;
-        }
-      }
-
-      .justPhoto {
-        width: 39%;
-        float: right;
       }
     }
   }
