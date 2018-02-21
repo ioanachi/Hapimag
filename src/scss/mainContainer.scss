@@ -89,7 +89,8 @@ html {
 
           .UpperBox {
             float: right;
-            display: inline-block;
+            display: flex;
+            list-style: none;
 
             a {
               padding-right: 10px;
@@ -98,12 +99,17 @@ html {
             }
           }
 
-          div {
+          .bookingBox {
             float: right;
+            display: flex;
+            list-style: none;
             background-color: transparent;
             margin-right: 18px;
 
-            p {
+            a {
+              padding-right: 10px;
+              line-height: 1;
+              opacity: 0.6;
               color: rgb(10, 148, 215);
               font-size: 25px;
             }
