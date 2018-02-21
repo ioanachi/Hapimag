@@ -23,7 +23,8 @@ html {
         &:hover {
           background-color: white;
           opacity: 0.9;
-          p{
+
+          p {
             color: red;
             background-color: transparent;
           }
@@ -35,24 +36,52 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
+          margin-left: 40px;
+          position: relative;
 
           p {
             color: rgb(1, 151, 224);
-                font-size: 31px;
+            font-size: 31px;
             text-transform: uppercase;
+            float: left;
           }
-.search{
-  color:white;
-}
-.what{
-  color:white;
-
-}
 
 
 
+          .search {
+            .dropdown {
+              .dropdown-menu {
+                width: 1233px;
+                border: 0 solid white;
+                position: absolute;
+                z-index: 2;
+                overflow: hidden;
 
+                li {
+                  padding: 0;
 
+                  a {
+                    display: block;
+                    padding: 10px;
+                  }
+                }
+              }
+
+              .show {
+                display: block;
+                max-height: 9999px;
+
+              }
+
+              .hide {
+                max-height: 0;
+              }
+            }
+          }
+
+          .what {
+            color: white;
+          }
         }
       }
     }
