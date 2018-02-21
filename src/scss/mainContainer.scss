@@ -31,13 +31,13 @@ html {
         }
 
         .logoAndDropdowns {
-          width: 11%;
+          width: 46%;
           height: 65%;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-left: 40px;
           position: relative;
+          float: left;
 
           p {
             color: rgb(1, 151, 224);
@@ -80,11 +80,41 @@ html {
             color: white;
           }
         }
+
+        .rightMenu {
+          float: left;
+          width: 50%;
+          height: 100%;
+          align-items: center;
+
+          .UpperBox {
+            float: right;
+            display: inline-block;
+
+            a {
+              padding-right: 10px;
+              line-height: 1;
+              opacity: 0.6;
+            }
+          }
+
+          div {
+            float: right;
+            background-color: transparent;
+            margin-right: 18px;
+
+            p {
+              color: rgb(10, 148, 215);
+              font-size: 25px;
+            }
+          }
+        }
       }
     }
 
     #popup {
       position: absolute;
+      z-index: 3;
       display: none;
       top: 50px;
       left: 50px;
@@ -93,10 +123,21 @@ html {
       height: 200px;
     }
 
+    #popup {
+      position: absolute;
+      z-index: 3;
+      top: 50px;
+      left: 50px;
+      width: 200px;
+      height: 200px;
+    }
 
+    .hidepopup {
+      // display: none;
+    }
+
+    .showpopup {
+      display: block;
+    }
   }
-}
-#searchAndPopup{
-  color:black;
-
 }

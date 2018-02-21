@@ -25,9 +25,8 @@ var popupContainer = document.getElementById('popup');
 
 
 popupButton.onclick = function(event) {
-  console.log(typeof button, "popupButton MErge");
-
-  popupContainer.style.display = "inline-block !important";
   event.preventDefault();
+  popupContainer.classList.remove('hidepopup');
+  popupContainer.classList.add('showpopup');
 
 }
