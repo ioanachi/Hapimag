@@ -5,7 +5,7 @@ dropdownArray.forEach(function(el){
 			menu = el.querySelector('.dropdown-menu'),
 			arrow = button.querySelector('i.icon-arrow');
 
-	button.onmouseover  = function(event) {
+	button.onclick  = function(event) {
 		if(!menu.hasClass('show')) {
 			menu.classList.add('show');
 			menu.classList.remove('hide');
@@ -21,6 +21,19 @@ dropdownArray.forEach(function(el){
 			event.preventDefault();
 		}
 	};
+menu.onmouseover  = function(event) {
+  if(!menu.hasClass('show')) {
+    menu.classList.add('show');
+    menu.classList.remove('hide');
+    arrow.classList.add('open');
+    arrow.classList.remove('close');
+    event.preventDefault();
+  }
+};
+
+
+
+
   button.onmouseout  = function(event) {
     menu.classList.remove('show');
     menu.classList.add('hide');

@@ -468,7 +468,7 @@ __webpack_require__(16);
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Hapimag</title>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"backgroundMeniu \">\r\n    <div class=\"meniu\">\r\n      <div class=\"logoAndDropdowns \">\r\n        <p class=\"logoHapi\">Hapimag</p>\r\n\r\n        <div class=\"search\">\r\n          <ul>\r\n            <li class=\"dropdown\">\r\n              <a href=\"#\" data-toggle=\"dropdown\">Search <i class=\"icon-arrow\"></i></a>\r\n              <ul class=\"dropdown-menu\">\r\n                <li><a href=\"#\">Home</a></li>\r\n                <li><a href=\"#\">About Us</a></li>\r\n                <li><a href=\"#\">Services</a></li>\r\n                <li><a href=\"#\">Contact</a></li>\r\n              </ul>\r\n        </div>\r\n        <div class=\"what\">\r\n\r\n        </div>\r\n\r\n\r\n\r\n\r\n        <div class=\"searchAndAll \">\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  <div class=\"textAndPhoto \">\r\n    <div class=\"justText \">\r\n\r\n    </div>\r\n    <div class=\"justPhoto \">\r\n\r\n    </div>\r\n  </div>\r\n\r\n  <script src=\"dist/commons.js \"></script>\r\n  <script src='dist/bundle.js'>\r\n  </script>\r\n</body>\r\n\r\n</html>\r\n";
+module.exports = "<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Hapimag</title>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"backgroundMeniu \">\r\n    <div class=\"meniu\">\r\n      <div class=\"logoAndDropdowns \">\r\n        <p class=\"logoHapi\">Hapimag</p>\r\n\r\n        <div class=\"search\">\r\n\r\n            <div class=\"dropdown\">\r\n              <a href=\"#\" data-toggle=\"dropdown\">Where <i class=\"icon-arrow\"></i></a>\r\n              <ul class=\"dropdown-menu\">\r\n                <li><a href=\"#\">Country 1 </a></li>\r\n                <li><a href=\"#\">Country 2</a></li>\r\n                <li><a href=\"#\">Country 3</a></li>\r\n                <li><a href=\"#\">Country 4</a></li>\r\n                <li><a href=\"#\">Country 5</a></li>\r\n                <li><a href=\"#\">Country 6</a></li>\r\n                <li><a href=\"#\">Country 7</a></li>\r\n                <li><a href=\"#\">Country 8</a></li>\r\n                <li><a href=\"#\">Country 9</a></li>\r\n                <li><a href=\"#\">Country 10</a></li>\r\n                <li><a href=\"#\">Country 11</a></li>\r\n                <li><a href=\"#\">Country 12</a></li>\r\n                <li><a href=\"#\">Country 13</a></li>\r\n                <li><a href=\"#\">Country 14</a></li>\r\n              </ul>\r\n            </div>\r\n        </div>\r\n        <div class=\"what\">\r\n\r\n        </div>\r\n\r\n\r\n\r\n\r\n        <div class=\"searchAndAll \">\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n  <div class=\"textAndPhoto \">\r\n    <div class=\"justText \">\r\n\r\n    </div>\r\n    <div class=\"justPhoto \">\r\n\r\n    </div>\r\n  </div>\r\n\r\n  <script src=\"dist/commons.js \"></script>\r\n  <script src='dist/bundle.js'>\r\n  </script>\r\n</body>\r\n\r\n</html>\r\n";
 
 /***/ }),
 /* 6 */
@@ -702,36 +702,46 @@ __webpack_require__(17);
 var dropdown = document.querySelectorAll('.dropdown');
 var dropdownArray = Array.prototype.slice.call(dropdown, 0);
 dropdownArray.forEach(function (el) {
-	var button = el.querySelector('a[data-toggle="dropdown"]'),
-	    menu = el.querySelector('.dropdown-menu'),
-	    arrow = button.querySelector('i.icon-arrow');
+		var button = el.querySelector('a[data-toggle="dropdown"]'),
+		    menu = el.querySelector('.dropdown-menu'),
+		    arrow = button.querySelector('i.icon-arrow');
 
-	button.onmouseover = function (event) {
-		if (!menu.hasClass('show')) {
-			menu.classList.add('show');
-			menu.classList.remove('hide');
-			arrow.classList.add('open');
-			arrow.classList.remove('close');
-			event.preventDefault();
-		} else {
-			menu.classList.remove('show');
-			menu.classList.add('hide');
-			arrow.classList.remove('open');
-			arrow.classList.add('close');
-			event.preventDefault();
-		}
-	};
-	button.onmouseout = function (event) {
-		menu.classList.remove('show');
-		menu.classList.add('hide');
-		arrow.classList.remove('open');
-		arrow.classList.add('close');
-		event.preventDefault();
-	};
+		button.onclick = function (event) {
+				if (!menu.hasClass('show')) {
+						menu.classList.add('show');
+						menu.classList.remove('hide');
+						arrow.classList.add('open');
+						arrow.classList.remove('close');
+						event.preventDefault();
+				} else {
+						menu.classList.remove('show');
+						menu.classList.add('hide');
+						arrow.classList.remove('open');
+						arrow.classList.add('close');
+						event.preventDefault();
+				}
+		};
+		menu.onmouseover = function (event) {
+				if (!menu.hasClass('show')) {
+						menu.classList.add('show');
+						menu.classList.remove('hide');
+						arrow.classList.add('open');
+						arrow.classList.remove('close');
+						event.preventDefault();
+				}
+		};
+
+		button.onmouseout = function (event) {
+				menu.classList.remove('show');
+				menu.classList.add('hide');
+				arrow.classList.remove('open');
+				arrow.classList.add('close');
+				event.preventDefault();
+		};
 });
 
 Element.prototype.hasClass = function (className) {
-	return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+		return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
 };
 
 /***/ })
