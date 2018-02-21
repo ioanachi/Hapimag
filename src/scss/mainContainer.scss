@@ -46,8 +46,6 @@ html {
             float: left;
           }
 
-
-
           .search {
             .dropdown {
               .dropdown-menu {
@@ -70,7 +68,6 @@ html {
               .show {
                 display: block;
                 max-height: 9999px;
-
               }
 
               .hide {
@@ -85,5 +82,21 @@ html {
         }
       }
     }
+
+    #popup {
+      position: absolute;
+      display: none;
+      top: 50px;
+      left: 50px;
+      /* you should change left and top */
+      width: 200px;
+      height: 200px;
+    }
+
+
   }
+}
+#searchAndPopup{
+  color:black;
+
 }
