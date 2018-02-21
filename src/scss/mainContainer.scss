@@ -23,17 +23,36 @@ html {
         &:hover {
           background-color: white;
           opacity: 0.9;
+          p{
+            color: red;
+            background-color: transparent;
+          }
         }
 
         .logoAndDropdowns {
           width: 11%;
           height: 65%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
-          .logoHapi {
-color: white;
-text-transform: uppercase;
-
+          p {
+            color: rgb(1, 151, 224);
+                font-size: 31px;
+            text-transform: uppercase;
           }
+.search{
+  color:white;
+}
+.what{
+  color:white;
+
+}
+
+
+
+
+
         }
       }
     }
